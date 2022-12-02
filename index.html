@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bayt Slider</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="row">
+      <button onclick="scrollBack()" class="scroll-button">&lt;</button>
+      <div class="outer-slider">
+        <div id="inner-slider" onscroll="onSliderScroll()">
+          <!-- USER CONTENT HERE -->
+          <h1 class="item">HELLO THERE</h1>
+          <h1 class="item">HELLO THERE 2</h1>
+          <h1 class="item">HELLO THERE 3</h1>
+          <h1 class="item">HELLO THERE 4</h1>
+          <!-- END USER CONTENT -->
+        </div>
+      </div>
+      <button onclick="scrollForward()" class="scroll-button">&gt;</button>
+    </div>
+    <div class="row">
+      <div id="dots-container"></div>
+    </div>
+    <div class="autoplay-container">
+      <button id="autoplay-btn" onclick="toggleAutoPlay()">AUTOPLAY</button>
+      <p id="on">On</p>
+      <p id="off">Off</p>
+      <p id="off">duration in seconds</p>
+      <input type="number" name="duration" id="duration" value="2" oninput="onDurationchange(event)"/>
+    </div>
+  </body>
+</html>
